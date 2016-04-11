@@ -1,0 +1,1737 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>books</title></head><body><article class="markdown-body"><h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>读书记录</h1>
+<blockquote>
+<p>我并不期待从读书中获得什么，也不期待可以作为谈资。<br />
+    　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　——我自己说的</p>
+</blockquote>
+<hr />
+<h2 id="figochan"><a href="http://www.figochan.me">figochan的个人主页</a></h2>
+<hr />
+<ol>
+<li>《钢铁是怎样炼成的》奥斯特洛夫斯基   苏联<ul>
+<li>初中借阅，似乎没还</li>
+</ul>
+</li>
+<li>《呼啸山庄》艾米莉·勃朗特  英国<ul>
+<li>镇上的小书店</li>
+</ul>
+</li>
+<li>《平凡的世界》路遥<ul>
+<li>那天，只有三顿饭和这本书</li>
+</ul>
+</li>
+<li>《人生》路遥<ul>
+<li>程集中学门口的小书店</li>
+</ul>
+</li>
+<li>《第四人称》陈龙</li>
+<li>《穆斯林的葬礼》霍达<ul>
+<li>凉亭白崖寨书店</li>
+<li>宗教  爱情</li>
+</ul>
+</li>
+<li>《活着》余华<ul>
+<li>活着本身就是一件无比艰难的事</li>
+</ul>
+</li>
+<li>《读大学，究竟读什么》覃彪喜<ul>
+<li>我也不知道读什么</li>
+</ul>
+</li>
+<li>《中国没有榜样》刘仰<ul>
+<li>和上本一起在综合楼买的，没啥意思</li>
+</ul>
+</li>
+<li>《麦田里的守望者》塞林格  美国<ul>
+<li>精神世界  意识流</li>
+</ul>
+</li>
+<li>《挪威的森林》村上春树  日本<ul>
+<li>精神世界的成长</li>
+</ul>
+</li>
+<li>《百年孤独》加西亚·马尔克斯  哥伦比亚<ul>
+<li>个人最爱</li>
+<li>魔幻现实主义</li>
+<li>马孔多的背后是整个拉丁美洲的历史</li>
+<li>马尔克斯是对中国作家影响最大的作家之一</li>
+</ul>
+</li>
+<li>《白鹿原》陈忠实  <ul>
+<li>家族恩怨 恢弘大气 民族历史 史诗巨著</li>
+</ul>
+</li>
+<li>《兄弟》余华  2册<ul>
+<li>荒诞的一发不可收拾</li>
+</ul>
+</li>
+<li>《谁动了我的奶酪》斯宾塞·约翰逊  美国</li>
+<li>《追风筝的人》卡勒德·胡塞尼  阿富汗/美国<ul>
+<li>阿拉伯世界  救赎</li>
+<li>胡塞尼的书总有一种伤感</li>
+</ul>
+</li>
+<li>《狼图腾》姜戎<ul>
+<li>不喜欢 </li>
+<li>情节拖沓、冗余 观点偏激</li>
+</ul>
+</li>
+<li>《浪潮之巅》吴军<ul>
+<li>室友的</li>
+<li>吴军博士的书都广受好评</li>
+</ul>
+</li>
+<li>《看懂世界经济的第一本书》张静</li>
+<li>《因为痛，所以叫青春》金兰都  韩国<ul>
+<li>这类书总会有市场</li>
+</ul>
+</li>
+<li>《明朝那些事儿》当年明月 7册<ul>
+<li>通俗又不失分寸 戏谑也不乏严谨</li>
+</ul>
+</li>
+<li>《货币战争》宋鸿兵 3册<ul>
+<li>情节夸张</li>
+<li>宋鸿兵正因此饱受争议</li>
+<li>图书馆里这本书旁边总会有《批判货币战争》之类的书的身影</li>
+</ul>
+</li>
+<li>《老人与海》海明威  美国</li>
+<li>《1984》乔治·奥威尔  英国<ul>
+<li>政治寓言 讽刺</li>
+<li>书中情景已经被验证</li>
+<li>书中妇女吟唱的      <blockquote>
+<p>谁说旧仇转眼既忘<br />
+谁说往事最能疗创<br />
+往事笑声泪影<br />
+历历在我心上  </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>《简爱》夏洛蒂·勃朗特  英国</li>
+<li>《堂吉诃德》塞万提斯  西班牙</li>
+<li>《尘埃落定》阿来<ul>
+<li>藏族历史</li>
+</ul>
+</li>
+<li>《牛虻》伏尼契  爱尔兰</li>
+<li>《钟鼓楼》刘心武<ul>
+<li>市井生活 配合何勇的《钟鼓楼》更好</li>
+</ul>
+</li>
+<li>《雾都孤儿》狄更斯  英国</li>
+<li>《一路钟情》聂作平<ul>
+<li>买错了，回家的火车上才发现</li>
+</ul>
+</li>
+<li>《最好的人生在路上》王紫菱<ul>
+<li>跟上本一起买的，所以。。。</li>
+</ul>
+</li>
+<li>《中国大地上的穆斯林》马跃 樊前锋</li>
+<li>《中国大趋势》奈斯比特  美国</li>
+<li>《红楼梦》曹雪芹<ul>
+<li>并没有看完</li>
+</ul>
+</li>
+<li>《我是一只IT小小鸟》胡江堂</li>
+<li>《秦腔》贾平凹<ul>
+<li>贾平凹每部小说都是当代农村的变迁史</li>
+</ul>
+</li>
+<li>《数学之美》吴军</li>
+<li>《万历十五年》黄仁宇  美国<ul>
+<li>不同角度看历史，不经意之间已是历史的必然</li>
+</ul>
+</li>
+<li>《许三观卖血记》余华<ul>
+<li>荒诞派，绝对的荒诞派（脑补papi酱）</li>
+</ul>
+</li>
+<li>《废都》贾平凹<ul>
+<li>删减版，还刻意补全了再看</li>
+</ul>
+</li>
+<li>《时代三部曲》王小波 3册<ul>
+<li>真正的天才，讽刺和放荡，不会再有第二个王小波了</li>
+</ul>
+</li>
+<li>《羞耻》拉什迪  英国<ul>
+<li>作者的履历值得看看</li>
+<li>隐约有些魔幻色彩</li>
+</ul>
+</li>
+<li>《迈克尔·K生活的时代》J·M库切  南非</li>
+<li>《耻》J·M库切  南非</li>
+<li>《报道伊斯兰》爱德华·萨义德  以色列</li>
+<li>《四牌楼》刘心武</li>
+<li>《海边的卡夫卡》村上春树  日本</li>
+<li>《巴黎圣母院》维克多·雨果  法国</li>
+<li>《反常识经济学》贝克尔  波斯纳  美国</li>
+<li>《流血的仕途》曹昇 2册<ul>
+<li>较之于《明朝那些事儿》，有些逊色</li>
+</ul>
+</li>
+<li>《中国大历史》黄仁宇  美国<ul>
+<li>黄老先生看历史的角度总是与众不同</li>
+</ul>
+</li>
+<li>《牛奶可乐经济学》弗兰克  美国</li>
+<li>《最后一个匈奴》高建群<ul>
+<li>陕西作家代表</li>
+</ul>
+</li>
+<li>《东周列国志》冯梦龙 明</li>
+<li>《蛙》莫言</li>
+<li>《丧钟为谁而鸣》海明威  美国</li>
+<li>《红高粱家族》莫言</li>
+<li>《浮躁》贾平凹</li>
+<li>《茶花女》小仲马  法国</li>
+<li>《青春万岁》王蒙<ul>
+<li>浓浓的主旋律</li>
+</ul>
+</li>
+<li>《日光流年》阎连科<ul>
+<li>阎连科是最喜爱的国内作家</li>
+<li>创造了他自己声称的神实主义</li>
+<li>敬重每一个敢于面对《日光流年》的读者和敬畏呼吸的人</li>
+</ul>
+</li>
+<li>《瓦尔登湖》梭罗  美国<ul>
+<li>耐心再耐心</li>
+</ul>
+</li>
+<li>《变形记》卡夫卡  奥地利<ul>
+<li>另一个影响了中国作家的人</li>
+</ul>
+</li>
+<li>《在细雨中呼喊》余华</li>
+<li>《了不起的盖茨比》菲茨·杰拉德  美国</li>
+<li>《商州》贾平凹</li>
+<li>《高兴》贾平凹<ul>
+<li>改编成电影，赵本山主演的《落叶归根》有相似的地方</li>
+</ul>
+</li>
+<li>《契诃夫中短篇小说精选》契诃夫  苏联<ul>
+<li>三大短篇小说巨匠</li>
+</ul>
+</li>
+<li>《撒哈拉的故事》三毛<ul>
+<li>现在不看了</li>
+</ul>
+</li>
+<li>《无雨之城》铁凝</li>
+<li>《我的帝王生涯》苏童<ul>
+<li>有着一种出奇的冷静</li>
+</ul>
+</li>
+<li>《欧亨利短篇小说选》欧·亨利  美国<ul>
+<li>三大短篇小说巨匠</li>
+</ul>
+</li>
+<li>《呼兰河传》萧红</li>
+<li>《苏菲的世界》乔斯坦·贾德  挪威<ul>
+<li>哲学入门</li>
+</ul>
+</li>
+<li>《莫泊桑小说选》莫泊桑  法国<ul>
+<li>三大短篇小说巨匠</li>
+</ul>
+</li>
+<li>《买单》沃克  美国</li>
+<li>《理想国》柏拉图  古希腊<ul>
+<li>政治 国家 政府</li>
+</ul>
+</li>
+<li>《大卫的伤疤》苏珊·阿布哈瓦  美国<ul>
+<li>中东世界</li>
+</ul>
+</li>
+<li>《不能承受的生命之轻》米兰·昆德拉  捷克</li>
+<li>《人间词话》王国维</li>
+<li>《FBI教你读心术》乔·纳瓦罗 马文·卡尔林斯  美国<ul>
+<li>屁用都没有</li>
+</ul>
+</li>
+<li>《霍乱时期的爱情》加西亚·马尔克斯  哥伦比亚<ul>
+<li>马尔克斯认为这才是他最好的小说</li>
+</ul>
+</li>
+<li>《受活》阎连科</li>
+<li>《岛》维多利亚·希斯洛普  英国<ul>
+<li>这书好像现在又火了</li>
+</ul>
+</li>
+<li>《一个人的村庄》刘亮程<ul>
+<li>真正的农民和作家</li>
+</ul>
+</li>
+<li>《昨日的世界》茨威格  奥地利<ul>
+<li>茨威格对于这个世界一直都是困惑的，自杀也许是一个好的选择</li>
+</ul>
+</li>
+<li>《天才在左疯子在右》高铭<ul>
+<li>不止一个人跟我说他觉得自己就是书中的疯子</li>
+<li>我想说的是，呵呵</li>
+</ul>
+</li>
+<li>《动物农场》乔治·奥威尔  英国<ul>
+<li>似乎是任何新政权的必由之路</li>
+</ul>
+</li>
+<li>《檀香刑》莫言</li>
+<li>《曾国藩》唐浩明 3册<ul>
+<li>是小说也是传记</li>
+</ul>
+</li>
+<li>《幸福了吗》白岩松<ul>
+<li>要不是什么收藏版，我是不会买的</li>
+</ul>
+</li>
+<li>《何谓文化》余秋雨<ul>
+<li>通篇废话</li>
+</ul>
+</li>
+<li>《掘金黑客》鲍尔森  美国</li>
+<li>《人生的智慧》叔本华  德国<ul>
+<li>消极悲观的哲学</li>
+</ul>
+</li>
+<li>《金融的逻辑》陈志武  美国</li>
+<li>《月亮与六便士》毛姆  英国<ul>
+<li>艺术、理想和现实</li>
+</ul>
+</li>
+<li>《战争与和平》列夫·托尔斯泰  苏联</li>
+<li>《带灯》贾平凹</li>
+<li>《生命册》李佩甫</li>
+<li>《中国历代政治得失》钱穆</li>
+<li>《枪炮、病菌与钢铁——人类社会的命运》戴蒙德  美国</li>
+<li>《杀死一只反舌鸟》哈勃·李  美国<ul>
+<li>偏见 歧视</li>
+</ul>
+</li>
+<li>《不沉默的少数》南方周末</li>
+<li>《心是孤独的猎手》麦克勒斯  美国</li>
+<li>《夹边沟记事》杨显惠<ul>
+<li>良心作家</li>
+<li>纪事三部曲之一</li>
+</ul>
+</li>
+<li>《呐喊——为了中国曾经的摇滚》陆凌涛 李洋</li>
+<li>《历史深处的忧虑——近距离看美国之一》林达  美国</li>
+<li>《公正：该如何做是好》桑德尔  美国</li>
+<li>《此间的少年》江南<ul>
+<li>网络文学</li>
+</ul>
+</li>
+<li>《梦里花落知多少》三毛</li>
+<li>《甘南纪事》杨显惠<ul>
+<li>纪事三部曲之一</li>
+</ul>
+</li>
+<li>《定西孤儿院纪事》杨显惠<ul>
+<li>纪事三部曲之一</li>
+</ul>
+</li>
+<li>《看上去很美》王朔<ul>
+<li>我是挺喜欢的</li>
+</ul>
+</li>
+<li>《南渡北归》岳南 3册<ul>
+<li>民国大师</li>
+</ul>
+</li>
+<li>《沉重的肉身》刘小枫</li>
+<li>《坚硬如水》阎连科</li>
+<li>《荒野侦探》波拉尼奥  智利</li>
+<li>《风雅颂》阎连科<ul>
+<li>什么都敢写</li>
+</ul>
+</li>
+<li>《四号禁区》阎连科</li>
+<li>《旧制度与大革命》托克维尔  法国<ul>
+<li>常委推荐的</li>
+</ul>
+</li>
+<li>《你永远都无法叫醒一个装睡的人》周濂</li>
+<li>《战火之外》吕可丁</li>
+<li>《2666》波拉尼奥  智利</li>
+<li>《美的历程》李泽厚</li>
+<li>《公羊的节日》巴尔加斯·略萨  秘鲁</li>
+<li>《绿房子》巴尔加斯·略萨  秘鲁</li>
+<li>《城市与狗》巴尔加斯·略萨  秘鲁</li>
+<li>《乡关何处》野夫<ul>
+<li>从头到尾都在抱怨</li>
+</ul>
+</li>
+<li>《罗斯柴尔德家族》尼尔·弗格森 2册  英国</li>
+<li>《被遗忘的士兵》盖伊·萨杰  法国</li>
+<li>《自由》乔纳森·弗兰岑  美国<ul>
+<li>如它的封面所说：是那种真正好看的小说</li>
+</ul>
+</li>
+<li>《巨流河》齐邦媛</li>
+<li>《大数据时代》维克托·舍恩伯格  英国</li>
+<li>《自私的基因》理查德·道金斯  英国</li>
+<li>《江城》彼得·代斯勒  美国<ul>
+<li>居住在中国的美国人严重的中国</li>
+<li>交给陆川拍实在是糟蹋了</li>
+</ul>
+</li>
+<li>《雪国》川端康成  日本</li>
+<li>《妻妾成群》苏童<ul>
+<li>张艺谋电影《大红灯笼高高挂》</li>
+</ul>
+</li>
+<li>《这些人，那些事》吴念真<ul>
+<li>怀旧文学都是这个水平就好了</li>
+</ul>
+</li>
+<li>《偷影子的人》马克·李维  法国</li>
+<li>《源泉》安·兰德  美国</li>
+<li>《项塔兰》格里高利·大卫·罗伯茨  澳大利亚<ul>
+<li>江湖义气</li>
+</ul>
+</li>
+<li>《第七天》余华<ul>
+<li>余华看来是写不出好东西了</li>
+</ul>
+</li>
+<li>《看不见的城市》卡尔维诺  意大利<ul>
+<li>装逼必备</li>
+</ul>
+</li>
+<li>《斗鸡》阎连科</li>
+<li>《卡拉马佐夫兄弟》陀思妥耶夫斯基  苏联</li>
+<li>《芙蓉镇》古华<ul>
+<li>虽然有点主旋律</li>
+<li>姜文、刘晓庆同名电影</li>
+</ul>
+</li>
+<li>《少年天子》凌力<ul>
+<li>作者是校友</li>
+</ul>
+</li>
+<li>《一句顶一万句》刘震云</li>
+<li>《我叫刘跃进》刘震云</li>
+<li>《论中国》亨利·基辛格  美国</li>
+<li>《林肯传》卡耐基  美国</li>
+<li>《一个陌生女人的来信》茨威格  奥地利</li>
+<li>《风之影》卡洛斯·鲁伊斯·萨丰  西班牙</li>
+<li>《城南旧事》林海音<ul>
+<li>怀旧</li>
+</ul>
+</li>
+<li>《天朝的崩溃》茅海建</li>
+<li>《逃离》爱丽丝·门罗  加拿大</li>
+<li>《往事并不如烟》章诒和<ul>
+<li>怀旧</li>
+</ul>
+</li>
+<li>《我与父辈》阎连科<ul>
+<li>算是自传吧</li>
+</ul>
+</li>
+<li>《上学记》何兆武<ul>
+<li>好的回忆录就是一个有智慧的老人在你面前娓娓道来</li>
+</ul>
+</li>
+<li>《痛并快乐着》白岩松</li>
+<li>《我的现实，我的主义》阎连科</li>
+<li>《玉米》毕飞宇</li>
+<li>《战争论》克劳塞维茨  德国</li>
+<li>《国富论》亚当·斯密  英国</li>
+<li>《寻找家园》高尔泰<ul>
+<li>和野夫是一个路子的</li>
+</ul>
+</li>
+<li>《马桥词典》韩少功<ul>
+<li>了解中国乡村</li>
+</ul>
+</li>
+<li>《长恨歌》王安忆<ul>
+<li>值得一读</li>
+</ul>
+</li>
+<li>《滚吧，生活》基思·理查兹  英国</li>
+<li>《1768中国妖术大恐慌》孔飞力</li>
+<li>《袁氏当国》唐绍刚</li>
+<li>《蒋介石传》克洛泽 美国</li>
+<li>《民国风度》徐百柯</li>
+<li>《飞虎队员眼中的中国》拉森 迪柏  美国</li>
+<li>《希特勒传》约翰·托兰  美国</li>
+<li>《我们台湾这些年》廖信忠</li>
+<li>《一个经济杀手的自白》约翰·铂金斯  美国</li>
+<li>《海狼》杰克·伦敦  美国</li>
+<li>《灿烂千阳》卡勒德·胡塞尼  美国</li>
+<li>《看见》柴静</li>
+<li>《悉达多》黑塞  德国</li>
+<li>《炸裂志》阎连科</li>
+<li>《绿皮火车》周云蓬<ul>
+<li>散文</li>
+</ul>
+</li>
+<li>《佛教历史》佛光星云</li>
+<li>《空山》阿来</li>
+<li>《删除》舍恩伯格  英国</li>
+<li>《日瓦戈医生》帕斯捷尔纳克  苏联</li>
+<li>《人类的故事》房龙  美国<ul>
+<li>犹如站在高处，俯瞰历史长河</li>
+<li>都是西方的历史</li>
+</ul>
+</li>
+<li>《喧哗与躁动》福克纳  美国</li>
+<li>《罪与罚》陀思妥耶夫斯基  苏联</li>
+<li>《正见》宗萨蒋扬钦则仁波切  不丹</li>
+<li>《论美国的民主》托克维尔  法国</li>
+<li>《品三国》易中天</li>
+<li>《梦的解析》弗洛伊德  奥地利</li>
+<li>《中国近代史》蒋廷黻</li>
+<li>《大清相国》王跃文</li>
+<li>《共和的危机》阿伦特  美国</li>
+<li>《红与黑》司汤达  法国</li>
+<li>《额尔古纳河右岸》迟子建<ul>
+<li>正在逝去的民族和文化</li>
+</ul>
+</li>
+<li>《世界征服者史》志菲尼  波斯</li>
+<li>《万物有灵且美》吉米·哈利  英国</li>
+<li>《大宋帝国三百年：赵匡胤时间——上》金纲</li>
+<li>《少年彷徨时》黑塞  德国</li>
+<li>《局外人》加缪  法国</li>
+<li>《科技想要什么》凯文·凯利  美国</li>
+<li>《社会契约论》让·卢梭  法国<ul>
+<li>真正通俗的政治</li>
+</ul>
+</li>
+<li>《乡土中国》费孝通<ul>
+<li>中国社会学鼻祖</li>
+</ul>
+</li>
+<li>《古拉格：一部历史》安妮·阿普尔保姆  美国</li>
+<li>《美国种族简史》托马斯·索维尔  美国</li>
+<li>《中国人史纲》柏杨</li>
+<li>《天堂在另外那个街角》巴尔加斯·略萨  秘鲁</li>
+<li>《蒋介石与现代中国》陶涵  美国<ul>
+<li>这个版本很好</li>
+</ul>
+</li>
+<li>《第二次世界大战战史》李德·哈特  英国</li>
+<li>《沉思录》马克·奥勒留  古罗马<ul>
+<li>哲学  思考</li>
+</ul>
+</li>
+<li>《博尔赫斯小说集》博尔赫斯  阿根廷</li>
+<li>《繁花》金宇澄<ul>
+<li>和《长恨歌》类似，上海市井生活</li>
+</ul>
+</li>
+<li>《达芬奇密码》丹·布朗  美国</li>
+<li>《失控》凯文·凯利  美国</li>
+<li>《古希腊神话与传说》斯威布  德国</li>
+<li>《纠正》乔纳森·弗兰岑  美国</li>
+<li>《魔山》托马斯·曼  德国</li>
+<li>《玫瑰的名字》翁贝托·艾克  意大利</li>
+<li>《从黎明到衰落》雅克·巴尔赞  美国</li>
+<li>《被淹没的和被拯救的》普利莫·莱维  意大利</li>
+<li>《大汗之国》史景迁  美国</li>
+<li>《菊与刀》露丝·本尼迪克特  美国<ul>
+<li>日本文化</li>
+</ul>
+</li>
+<li>《灵魂只能独行》周国平<ul>
+<li>鸡汤大师</li>
+</ul>
+</li>
+<li>《老生》贾平凹</li>
+<li>《小王子》圣·埃克苏佩里  法国</li>
+<li>《群山回唱》卡勒德·胡塞尼  美国</li>
+<li>《一个人的朝圣》蕾秋·乔伊斯  英国</li>
+<li>《棋王 树王 孩子王》阿城</li>
+<li>《人啊，人！》戴厚英</li>
+<li>《一百个人的十年》冯骥才 </li>
+<li>《你往何处去》亨里克·显克微支  波兰</li>
+<li>《美丽新世界》阿道司·赫胥黎  英国<ul>
+<li>反乌托邦</li>
+</ul>
+</li>
+<li>《面纱》毛姆  英国</li>
+<li>《我们》扎米亚京  俄罗斯<ul>
+<li>反乌托邦</li>
+</ul>
+</li>
+<li>《我们生活在巨大的差距里》余华<ul>
+<li>骗钱的</li>
+</ul>
+</li>
+<li>《刀锋》毛姆  英国</li>
+<li>《洗澡》杨绛</li>
+<li>《基督山伯爵》大仲马  法国<ul>
+<li>复仇</li>
+</ul>
+</li>
+<li>《生死场》萧红</li>
+<li>《狂热分子，群众运动圣经》埃里克·霍佛  美国</li>
+<li>《十一种孤独》理查德·耶茨  美国</li>
+<li>《自由在高处》熊培云</li>
+<li>《上帝掷骰子吗》曹天元</li>
+<li>《没有女人的男人们》村上春树  日本</li>
+<li>《耶路撒冷三千年》西蒙·蒙蒂菲奥里  英国</li>
+<li>《1453——君士坦丁堡之战》罗杰·克劳利  英国</li>
+<li>《海洋帝国——地中海大决战》罗杰·克劳利  英国</li>
+<li>《财富之城——威尼斯海洋霸权》罗杰·克劳利  英国<ul>
+<li>以上是三部曲</li>
+</ul>
+</li>
+<li>《金枝》J·G·弗雷泽  英国</li>
+<li>《说部之乱》朱岳<ul>
+<li>脑洞大开的奇幻文学，尤喜爱第一篇《原路追踪》</li>
+</ul>
+</li>
+<li>《平如美棠》饶平如<ul>
+<li>爱情  回忆</li>
+</ul>
+</li>
+<li>《故事》罗伯特·麦基  美国</li>
+<li>《文明之光》吴军 3册</li>
+<li>《全球通史》斯塔夫里阿诺斯  美国</li>
+<li>《泛若不系之舟》傅真</li>
+<li>《大问题——简明哲学导论》罗伯特·所罗门  美国</li>
+<li>《浮生六记》沈复  清</li>
+<li>《夜莺与玫瑰》王尔德  英国</li>
+<li>《永恒的终结》阿西莫夫  美国<ul>
+<li>科幻小说鼻祖</li>
+</ul>
+</li>
+<li>《古炉》贾平凹</li>
+<li>《丁庄梦》阎连科<ul>
+<li>郭富城、章子怡电影《最爱》</li>
+</ul>
+</li>
+<li>《岁朝清供》汪曾祺</li>
+<li>《苏东坡传》林语堂</li>
+<li>《迷宫中的将军》加西亚·马尔克斯  哥伦比亚</li>
+<li>《桃花扇底看前朝》许石林</li>
+<li>《活着之上》阎真<ul>
+<li>够直白，文学性不足，应该给大学老师看看</li>
+</ul>
+</li>
+<li>《文化苦旅》余秋雨</li>
+<li>《吾国与吾民》林语堂<ul>
+<li>对中国人的观察细致入微</li>
+</ul>
+</li>
+<li>《少女哪吒》绿妖<ul>
+<li>荟萃馆  签名版</li>
+</ul>
+</li>
+<li>《家》巴金<ul>
+<li>西宁书城</li>
+</ul>
+</li>
+<li>《民主的精神》拉里·戴蒙德  美国</li>
+<li>《宽容》房龙  美国</li>
+<li>《中国通史》吕思勉<ul>
+<li>史学四大家之一</li>
+</ul>
+</li>
+<li>《陈寅恪的最后20年》陆建东<ul>
+<li>大师</li>
+</ul>
+</li>
+<li>《沉思录》列夫·托尔斯泰  苏联</li>
+<li>《黄雀记》苏童</li>
+<li>《人面桃花》格非</li>
+<li>《山河入梦》格非</li>
+<li>《春尽江南》格非<ul>
+<li>以上是江南三部曲</li>
+<li>逃不过的宿命</li>
+</ul>
+</li>
+<li>《我的名字叫红》帕慕克  土耳其</li>
+<li>《人类简史》尤瓦尔·赫拉利  以色列<ul>
+<li>许多有意思的新观点</li>
+</ul>
+</li>
+<li>《费马大定理：一个困惑了世间智者358年的难题》西蒙·辛格  英国</li>
+<li>《维特根斯坦：天才为之责任》瑞·蒙克  英国</li>
+<li>《阿拉伯的劳伦斯》斯科特·安德森  美国</li>
+<li>《社会心理学》迈尔斯  美国</li>
+<li>《加西亚·马尔克斯传》杰拉德·马丁  英国</li>
+<li>《天真的人类学家》奈杰尔·巴里  英国</li>
+<li>《把青春唱完：中国摇滚与一个文化群体的生活映像》高原</li>
+<li>《我的凉山兄弟：毒品、艾滋与流动青年》刘绍华<ul>
+<li>非常好的纪实作品</li>
+</ul>
+</li>
+<li>《午夜之子》鲁什迪  英国</li>
+<li>《莎士比亚》安东尼·伯吉斯  英国</li>
+<li>《世界电影史》大卫·波德维尔  美国</li>
+<li>《中国哲学简史》冯友兰<ul>
+<li>抛开政治立场问题，冯老确实是中国现代哲学奠基人</li>
+</ul>
+</li>
+<li>《中国近代史》徐中约<ul>
+<li>和蒋廷黻的版本一样都是极好的</li>
+</ul>
+</li>
+<li>《台北人》白先勇</li>
+<li>《拥抱战败》约翰·道尔  美国</li>
+<li>《天行者》刘醒龙</li>
+<li>《天国之秋》裴士锋  美国</li>
+<li>《东周列国故事》林汉达<ul>
+<li>通俗历史</li>
+</ul>
+</li>
+<li>《南明史》顾诚</li>
+<li>《走出帝制》秦晖<ul>
+<li>成了禁书</li>
+</ul>
+</li>
+<li>《逝年如水：周有光百年口述》周有光口述<ul>
+<li>另一部非常好的回忆录</li>
+</ul>
+</li>
+<li>《南华录：晚明南方人士生活史》赵柏田</li>
+<li>《斯通纳》约翰·威廉斯  美国<ul>
+<li>普通人的一生</li>
+<li>开头就交代了斯通纳平庸的一生</li>
+<li>不需要英雄，该看看大部分人的一生</li>
+</ul>
+</li>
+<li>《如何阅读一本书》莫提默•J•艾德勒  查尔斯•范多伦  美国</li>
+<li>《中国神话传说：从盘古到秦始皇》袁珂</li>
+<li>《悲伤与理智》约瑟夫·布罗茨基  美国<ul>
+<li>诗人的散文</li>
+</ul>
+</li>
+<li>《最后的耍猴人》马宏杰<ul>
+<li>纪实作品</li>
+</ul>
+</li>
+<li>《李光耀观天下》李光耀</li>
+<li>《潜规则：中国历史中的真实游戏》吴思</li>
+<li>《史记》司马迁著 韩兆琦注</li>
+<li>《渴望生活：梵高传》欧文·斯通  美国</li>
+<li>《生活与命运》瓦西里·格罗斯曼  苏联</li>
+<li>《文学回忆录》木心 2册</li>
+</ol>
+<hr />
+<h3 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>持续更新中......</h3></article></body></html>
